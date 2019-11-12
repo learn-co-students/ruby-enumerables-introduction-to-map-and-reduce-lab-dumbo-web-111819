@@ -30,15 +30,16 @@ while i< source_array.length do
 end
   return array
 end
-def reduce_to_total(source_array, starting_point)
+def reduce_to_total(source_array,starting_point=0)
 i = 0 
 array = []
 while i < source_array.length do 
-  array.push(source_array[i] + starting_point)
+ starting_point += source_array
   i+=1 
  end
-  return array 
+  return starting_point
 end
+
   def reduce_to_all_true(source_array)
   i = 0 
   while i < source_array.length do 
@@ -50,7 +51,7 @@ end
    return false
      end 
   end
-  end 
+  
 end
   
   
